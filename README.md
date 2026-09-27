@@ -528,7 +528,7 @@ checagens de qualidade persistidas e análise com discussão.
 Passo a passo para rodar o projeto do zero:
 
 1. Crie uma conta no [Databricks Free Edition](https://www.databricks.com/learn/free-edition).
-2. Vá em **Workspace > Create > Git folder** e cole a URL deste repositório: `https://github.com/insanityz-15/mvp_pucrj_engenhariadedados`.
+2. Vá em **Workspace > Create > Git folder** e cole a URL deste repositório: `https://github.com/insanityz-15/mvp_pucrj_eng_de_dados`.
 3. Abra `notebooks/01_setup_ambiente` e execute. Ele cria o catálogo, os schemas e o volume. Se a conta não permitir `CREATE CATALOG`, é só trocar o widget para `catalogo = workspace`.
 4. Faça o upload dos dois CSVs para `/Volumes/mvp_brasileirao/bronze/landing/statsbomb/brasileirao_2025/`.
 5. Execute o `notebooks/99_pipeline_orquestrador` ou, melhor ainda, crie o Job a partir do `jobs/job_pipeline_mvp.yml` (7 tarefas encadeadas). No YAML, troque `<seu_email>` pelo seu usuário do Databricks.
