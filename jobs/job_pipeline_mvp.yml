@@ -11,22 +11,22 @@ resources:
           default: mvp_brasileirao
       tasks:
         - task_key: setup
-          notebook_task: {notebook_path: /Workspace/Users/<seu_email>/mvp_pucrj_engenhariadedados/notebooks/01_setup_ambiente}
+          notebook_task: {notebook_path: /Workspace/Users/<seu_email>/mvp_pucrj_eng_de_dados/notebooks/01_setup_ambiente}
         - task_key: bronze
           depends_on: [{task_key: setup}]
-          notebook_task: {notebook_path: /Workspace/Users/<seu_email>/mvp_pucrj_engenhariadedados/notebooks/02_bronze_ingestao}
+          notebook_task: {notebook_path: /Workspace/Users/<seu_email>/mvp_pucrj_eng_de_dados/notebooks/02_bronze_ingestao}
         - task_key: silver
           depends_on: [{task_key: bronze}]
-          notebook_task: {notebook_path: /Workspace/Users/<seu_email>/mvp_pucrj_engenhariadedados/notebooks/03_silver_transformacao}
+          notebook_task: {notebook_path: /Workspace/Users/<seu_email>/mvp_pucrj_eng_de_dados/notebooks/03_silver_transformacao}
         - task_key: gold
           depends_on: [{task_key: silver}]
-          notebook_task: {notebook_path: /Workspace/Users/<seu_email>/mvp_pucrj_engenhariadedados/notebooks/04_gold_modelagem}
+          notebook_task: {notebook_path: /Workspace/Users/<seu_email>/mvp_pucrj_eng_de_dados/notebooks/04_gold_modelagem}
         - task_key: qualidade
           depends_on: [{task_key: gold}]
-          notebook_task: {notebook_path: /Workspace/Users/<seu_email>/mvp_pucrj_engenhariadedados/notebooks/05_qualidade_dados}
+          notebook_task: {notebook_path: /Workspace/Users/<seu_email>/mvp_pucrj_eng_de_dados/notebooks/05_qualidade_dados}
         - task_key: catalogo
           depends_on: [{task_key: qualidade}]
-          notebook_task: {notebook_path: /Workspace/Users/<seu_email>/mvp_pucrj_engenhariadedados/notebooks/06_catalogo_dados}
+          notebook_task: {notebook_path: /Workspace/Users/<seu_email>/mvp_pucrj_eng_de_dados/notebooks/06_catalogo_dados}
         - task_key: analise
           depends_on: [{task_key: catalogo}]
-          notebook_task: {notebook_path: /Workspace/Users/<seu_email>/mvp_pucrj_engenhariadedados/notebooks/07_analise_perguntas}
+          notebook_task: {notebook_path: /Workspace/Users/<seu_email>/mvp_pucrj_eng_de_dados/notebooks/07_analise_perguntas}
